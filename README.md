@@ -4,7 +4,10 @@
 -  编码工具         IDEA2017
 -  java版本         1.8
 -  Springboot版本   2.1.3
-每个目录都可单独打开运行
- init------IDEA新建SpringBoot项目只整合了SpringMVC
+
+### 目录说明
+- init                                利用IDEA新建Web项目
+- spring-boot-me-starter              自定义场景启动器  
+- spring-boot-starter-test            场景启动器测试项目
  
 
