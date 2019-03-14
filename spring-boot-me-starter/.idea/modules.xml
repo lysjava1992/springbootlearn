@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/me-spring-boot-starter-autoconfigur/me-spring-boot-starter-autoconfigur.iml" filepath="$PROJECT_DIR$/me-spring-boot-starter-autoconfigur/me-spring-boot-starter-autoconfigur.iml" />
+      <module fileurl="file://$PROJECT_DIR$/me-spring-boot-starter/mespringbootstarter.iml" filepath="$PROJECT_DIR$/me-spring-boot-starter/mespringbootstarter.iml" />
+    </modules>
+  </component>
+</project>

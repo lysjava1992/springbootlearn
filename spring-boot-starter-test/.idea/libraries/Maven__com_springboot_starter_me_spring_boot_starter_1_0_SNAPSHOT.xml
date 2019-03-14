@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: com.springboot.starter:me-spring-boot-starter:1.0-SNAPSHOT">
+    <CLASSES>
+      <root url="jar://E:/LocalRepository/MavenRepository/com/springboot/starter/me-spring-boot-starter/1.0-SNAPSHOT/me-spring-boot-starter-1.0-SNAPSHOT.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://E:/LocalRepository/MavenRepository/com/springboot/starter/me-spring-boot-starter/1.0-SNAPSHOT/me-spring-boot-starter-1.0-SNAPSHOT-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://E:/LocalRepository/MavenRepository/com/springboot/starter/me-spring-boot-starter/1.0-SNAPSHOT/me-spring-boot-starter-1.0-SNAPSHOT-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
