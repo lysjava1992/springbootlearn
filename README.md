@@ -9,5 +9,6 @@
 - init                                利用IDEA新建Web项目
 - spring-boot-me-starter              自定义场景启动器  
 - spring-boot-starter-test            场景启动器测试项目
- 
+- spring-boot-integration-mybatis  SpringBoot整合mybatis配置Druid连接池
+
 
