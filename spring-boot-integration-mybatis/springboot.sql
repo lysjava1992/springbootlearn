@@ -4,7 +4,7 @@
  Source Server         : 虚拟机
  Source Server Type    : MySQL
  Source Server Version : 80015
- Source Host           : 192.168.1.158:3306
+ Source Host           : XXXXXXX:3306
  Source Schema         : springboot
 
  Target Server Type    : MySQL
