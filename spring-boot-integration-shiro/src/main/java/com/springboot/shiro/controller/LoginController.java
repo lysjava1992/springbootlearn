@@ -1,22 +1,16 @@
 package com.springboot.shiro.controller;
 
-import com.springboot.shiro.dao.UserDao;
 import com.springboot.shiro.util.AuthImgUtils;
 import org.apache.shiro.SecurityUtils;
+import org.apache.shiro.authc.ExcessiveAttemptsException;
 import org.apache.shiro.authc.IncorrectCredentialsException;
 import org.apache.shiro.authc.UnknownAccountException;
 import org.apache.shiro.authc.UsernamePasswordToken;
-import org.apache.shiro.spring.LifecycleBeanPostProcessor;
-import org.apache.shiro.spring.security.interceptor.AuthorizationAttributeSourceAdvisor;
-import org.springframework.aop.framework.autoproxy.DefaultAdvisorAutoProxyCreator;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.annotation.Bean;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
-
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.util.Map;
@@ -54,8 +48,16 @@ public class LoginController {
         }catch (UnknownAccountException e){
             map.put("msg","用户名错误");
             return "login";
-        }catch (IncorrectCredentialsException e){
-            map.put("msg","密码错误");
+        }catch (IncorrectCredentialsException ice) {
+           int  remain= (int) SecurityUtils.getSubject().getSession().getAttribute("remain");
+            if(remain>0&&remain<=3) {
+                map.put("msg","密码错误;还可尝试" + remain + "次");
+            }else {
+                map.put("msg","密码错误");
+            }
+            return "login";
+        }catch (ExcessiveAttemptsException e) {
+            map.put("msg","密码错误超过最大次数,您的账号被锁定1小时");
             return "login";
         }
         return "index";
@@ -66,4 +68,9 @@ public class LoginController {
         return "index";
     }
 
+    @GetMapping("logout")
+    public String logout(){
+        SecurityUtils.getSubject().logout();
+        return "login";
+    }
 }

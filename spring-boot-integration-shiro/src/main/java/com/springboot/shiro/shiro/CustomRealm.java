@@ -8,7 +8,6 @@ import org.apache.shiro.authz.AuthorizationInfo;
 import org.apache.shiro.authz.SimpleAuthorizationInfo;
 import org.apache.shiro.realm.AuthorizingRealm;
 import org.apache.shiro.subject.PrincipalCollection;
-import org.apache.shiro.subject.Subject;
 import org.apache.shiro.util.ByteSource;
 import org.springframework.beans.factory.annotation.Autowired;
 
@@ -52,6 +51,4 @@ public class CustomRealm extends AuthorizingRealm{
                 ByteSource.Util.bytes(user.getUsername()),getName());   // 加密加盐
         return authenticationInfo;
     }
-
-
 }
